@@ -1,0 +1,8 @@
+{
+  "name": "mywhatsAppClone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "7e71785f"
+}
