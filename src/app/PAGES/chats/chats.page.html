@@ -1,0 +1,19 @@
+<ion-content>
+  <div *ngFor="let c of chats; index as i">
+    <div class="chats" (click)="selectChat(c)">
+      <ion-avatar class="chats_avatar">
+        <img class="chats_profile_pic"
+        src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+      <div class="chats_name">
+        <div><strong>{{c.name}}</strong></div>
+        <div><p>{{getLastMessage(i)}}</p></div>
+
+      </div>
+      <div class="chat_time">Today</div>
+
+    </div>
+
+  </div>
+
+</ion-content>

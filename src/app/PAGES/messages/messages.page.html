@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+   <div class="message_title" slot="start">
+     <ion-buttons class="message_back_button">
+       <ion-back-button defaultHref="home" (click)="unsubscribe()"></ion-back-button>
+     </ion-buttons>
+     <div class="messages_profile_pic"><ion-avatar>
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar></div>
+    <ion-title>{{data.name}}</ion-title>
+   </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="message_content">
+    <div *ngFor="let c of data.messages">
+
+    <div class="message_chats" [ngClass]="{'message_receiver': user._id == c.from}">
+     {{c.message}}
+     <span class="message_time_stamp">Today</span>
+    </div>
+    </div>
+ 
+    
+  </div>
+
+  
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <div class="chat_input">
+    <div class="chat_icons">
+      <ion-icon name="happy-outline"></ion-icon>
+
+    </div>
+
+      <input type="text" name="chat" [(ngModel)]="chat">
+      <div class="chat_icons">
+        <ion-icon name="send" (click)="postMessage()"></ion-icon>
+      </div>
+    </div>
+  </ion-toolbar>
+
+</ion-footer>
